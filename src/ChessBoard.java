@@ -38,7 +38,8 @@ public class ChessBoard {
 	}
 	
 	
-	public static void addPiece(ArrayStack arr){
+	
+	public static void addPieces(ArrayStack arr){
 		int column;
 		int row;
 		Queen[] zack = new Queen[8];

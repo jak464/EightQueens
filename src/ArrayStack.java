@@ -77,6 +77,8 @@ public class ArrayStack {
 	}
 
 
+	
+
 
 
 	/*public void boobtoString() {
