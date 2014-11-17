@@ -1,19 +1,22 @@
 
-public class ChessBoard {
+public class Chessboard {
 
 	private static char[][] chessboard;
 	private int row;
 	private int column;
 	
-	public ChessBoard(){
+	//initializes a 2d char array to represent the chessboard
+	public Chessboard(){
 		chessboard = new char[8][8];
 	}
 	
-	public void printChessBoard(ArrayStack arrayStack){
+	public void printChessboard(ArrayStack arrayStack){
+		//adds the pieces to the chessboard
 		addPieces(arrayStack);
+		
+		//prints an 8x8 chessboard with line dividers
 		  for (row = 0; row < chessboard.length; row++)
 		    {
-
 		        System.out.println("");
 		        System.out.println(" +--+--+--+--+--+--+--+--+");
 		        System.out.print(row+1);
@@ -39,16 +42,18 @@ public class ChessBoard {
 	}
 	
 	
-	
-	private static void addPieces(ArrayStack arr){
+	//iterates through the array stack to find the queens 
+	//to add to the chessboard display
+	private static void addPieces(ArrayStack arrayStack){
 		int column;
 		int row;
-		Queen[] zack = new Queen[8];
-		zack = arr.getStack();
+		
+		Queen[] queen = new Queen[8];
+		queen = arrayStack.getStack();
 		
 		for (int i = 7; i >= 0; i--) {
-			row = zack[i].getRow();
-			column = zack[i].getColumn();
+			row = queen[i].getRow();
+			column = queen[i].getColumn();
 			chessboard[row-1][column-1] = 'Q';
 		}
 	}

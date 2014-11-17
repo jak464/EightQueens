@@ -2,13 +2,16 @@ public class Driver {
 
 	public static void main(String[] args) {
 		Driver me = new Driver();
-		me.doIT();
+		me.doIt();
 	}
 	
-	public void doIT(){
+	//creates an array stack object and a solution object
+	//calls the solve problem method to find a solution
+	public void doIt(){
 		ArrayStack as = new ArrayStack();
-		EightQueensSolution eightQueens = new EightQueensSolution(as);
-		eightQueens.algorithm();
+		EightQueensSolution eq = new EightQueensSolution(as);
+		eq.solveProblem();
+		System.out.println("\n" + as.toString());
 	}
 
 }
