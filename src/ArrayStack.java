@@ -27,10 +27,10 @@ public class ArrayStack {
 		if (isFull()) {
 			throw new StackOverFlowException("Stack Overflow");
 		} else {
-			Queen queenie = new Queen();
-			queenie.setRow(row);
-			queenie.setColumn(column);
-			stack[count] = queenie;
+			Queen queenPiece = new Queen();
+			queenPiece.setRow(row);
+			queenPiece.setColumn(column);
+			stack[count] = queenPiece;
 			count++;
 		}
 	}
@@ -38,7 +38,6 @@ public class ArrayStack {
 	public Queen pop() {
 		return stack[--count];
 	}
-	
 	
 	public boolean isEmpty() {
 		return (count == 0);
@@ -75,21 +74,5 @@ public class ArrayStack {
 		}
 		return rtn;
 	}
-
-
-	
-
-
-
-	/*public void boobtoString() {
-		   for(int i = 0; i < 8; i++)
-		   {
-		      for(int j = 0; j < 8; j++)
-		      {
-		         System.out.printf("%3d ", stack[i][j]);
-		      }
-		      System.out.println();
-		   }
-		}*/
 
 }

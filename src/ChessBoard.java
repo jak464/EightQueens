@@ -9,7 +9,8 @@ public class ChessBoard {
 		chessboard = new char[8][8];
 	}
 	
-	public void printchessboard(){
+	public void printChessBoard(ArrayStack arrayStack){
+		addPieces(arrayStack);
 		  for (row = 0; row < chessboard.length; row++)
 		    {
 
@@ -39,7 +40,7 @@ public class ChessBoard {
 	
 	
 	
-	public static void addPieces(ArrayStack arr){
+	private static void addPieces(ArrayStack arr){
 		int column;
 		int row;
 		Queen[] zack = new Queen[8];
@@ -50,21 +51,6 @@ public class ChessBoard {
 			column = zack[i].getColumn();
 			chessboard[row-1][column-1] = 'Q';
 		}
-//			if (i == count-1) {
-//				rtn += "Top -> " ;
-//			 stack[i].getRow() 
-//			 
-//			 stack[i].getColumn() +"\n";
-//		}
-		
-//	    chessboard[row-1][column-1] = 1;
 	}
-	
-/*	public static void main(String[] args) {
-		ChessBoard cb = new ChessBoard();
-		cb.printchessboard();
-		
-		cb.printchessboard();
-	}*/
 	
 }
