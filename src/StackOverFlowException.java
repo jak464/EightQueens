@@ -1,4 +1,3 @@
-
 public class StackOverFlowException extends RuntimeException {
 
 	public StackOverFlowException() {
