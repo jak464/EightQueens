@@ -1,4 +1,3 @@
-
 public class EightQueensSolution {
 	
 	ArrayStack arrayStack;
@@ -13,8 +12,6 @@ public class EightQueensSolution {
 		arrayStack.push(1, 1);
 		
 		while(!isSuccess & !arrayStack.isEmpty()){
-			//check if the most recent choice (arrayStack.stacktop()) is in the same row, same
-			//column, or same diagonal arrayStack any other choice... you will need to walk the stack to accomplish this
 			
 			if(arrayStack.getCount() != 1){
 			
@@ -55,8 +52,7 @@ public class EightQueensSolution {
 					arrayStack.pop();
 				}
 				
-				//not in column 8 and stack is not empty
-				
+				//if not in column 8 and stack is not empty
 				//increases the column of the stack top by 1
 				if(!arrayStack.isEmpty()){
 					arrayStack.stackTop().setColumn(arrayStack.stackTop().getColumn()+1);

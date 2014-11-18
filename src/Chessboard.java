@@ -1,4 +1,3 @@
-
 public class Chessboard {
 
 	private static char[][] chessboard;
